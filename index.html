@@ -429,7 +429,7 @@
 </ol>
 
 
-<h1 id="Prosody-Transfer"><a href="#Prosody-Transfer" class="headerlink" title="Prosody Transfer"></a>Prosody Transfer</h1><p>We use the text encoder of CLAPSpeech to extract the text prosody encoding of s7 and s8, then replace the text token encoding of <em>“higher”</em> in s8 with that in s7. The text of s7&#x2F;s8 are shown in the table below.</p>
+<h1 id="Case-Study-Prosody-Transfer"><a href="#Case-Study-Prosody-Transfer" class="headerlink" title="Case Study: Prosody Transfer"></a>Case Study: Prosody Transfer</h1><p>We use the text encoder of CLAPSpeech to extract the text prosody encoding of s7 and s8, then replace the text token encoding of <em>“higher”</em> in s8 with that in s7. The text of s7&#x2F;s8 are shown in the table below.</p>
 <table>
 <thead>
 <tr>
@@ -446,7 +446,7 @@
 <td>And create <strong>higher</strong> bodies for themselves!</td>
 </tr>
 </tbody></table>
-<p>We provide the audio and mel-spectrogram of the reference, source, and transferred sample in the following table. We can hear that by editing the text encoding of “higher” in the source sample, the prosody pattern of <em>“higher”</em> in the reference (the pitch contours in reference remain flat in the early stage and then rise in the late stage) has been successfully transfered into the transfered sample.</p>
+<p>We provide the audio and mel-spectrogram of the reference, source, and transferred sample in the following table. We can hear that by editing the text encoding of “higher” in the source sample, the prosody pattern of <em>“higher”</em> in the reference (the pitch contours in reference remain flat in the early stage and then rise in the late stage) has been successfully transfered into the transfered sample. The successful manipulation of the local prosody proves that our CLAPSpeech extract prosody representation effectively influences the prosody prediction of the TTS system.</p>
 <ol>
 <table style="width: 100%;">
     <thead>
