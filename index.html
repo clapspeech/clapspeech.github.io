@@ -1,184 +1,492 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+<html lang="en">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
+<link rel="alternate" href="/default" title="CLAPSpeech" ><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://example.com/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":false,"pjax":"","latex":false};
+</script>
+
+    <title>CLAPSpeech</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">CLAPSpeech</a>
   </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">CLAPSpeech</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+            </a>
+        </li>
+      </ul></nav>
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-clapspeech" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/01/04/clapspeech/" class="article-date">
-  <time class="dt-published" datetime="2023-01-04T03:54:00.390Z" itemprop="datePublished">2023-01-04</time>
-</a>
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><section id="posts" class="posts"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title"><a class="post-link" href="/clapspeech/">CLAPSpeech: Learning Prosody from Text Context with Contrastive Language-Audio Pre-Training</a>
+        </h1>
+
+      <div class="post-meta"></div>
+    </header>
+
+    <div class="post-content"><h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Improving text representation has attracted much attention to achieve expressive text-to-speech (TTS). However, existing works only implicitly learn the prosody with masked token tasks, which leads to low training efficiency and difficulty in prosody modeling. We propose CLAPSpeech, a cross-model contrastive pre-training framework that learns from the prosody variance of the same text token under different contexts. Specifically, 1) with the design of a text encoder and a prosody encoder, we encourage the model to connect the text context with its corresponding prosody pattern in the joint multi-model space; 2) we introduce a multi-scale pre-training pipeline to capture prosody patterns in multiple levels. 3) we show how to incorporate CLAPSpeech into existing TTS models for better prosody. Experiments show that CLAPSpeech improves the prosody prediction of TTS methods and outperforms other representation learning baselines. We also deeply analyze the principle behind the performance of CLAPSpeech. Ablation studies demonstrate the necessity of each component in CLAPSpeech. </p>
+<p><img align="center" src="/clapspeech/main.png" style="  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;"></p>
+<h1 id="Audio-Samples"><a href="#Audio-Samples" class="headerlink" title="Audio Samples"></a>Audio Samples</h1><p>We provide the audio samples generated by the TTS systems of <strong>LJSpeech</strong> (a single-speaker English dataset) and <strong>LibriTTS</strong> (a multi-speaker English dataset). We use <em>FastSpeech 2</em> as the <strong>prediction-based (PB)</strong> TTS baseline, and use <em>PortaSpeech</em> as the <strong>variation-based (VB)</strong> TTS baseline.</p>
+<h2 id="LJSpeech-English-single-speaker"><a href="#LJSpeech-English-single-speaker" class="headerlink" title="LJSpeech (English, single-speaker)"></a>LJSpeech (English, single-speaker)</h2><ol>
+<li style="text-align: left;font-size: 20px; font-style: italic">"The Chronicles of Newgate, Volume 2. By Arthur Griffiths. Section 4: Newgate down to 1818."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_bert/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_a3t/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_clip/0.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt_voc/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_bert/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_a3t/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_clip/0.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<p></p>
+<li style="text-align: left;font-size: 20px; font-style: italic">"Prisoners were committed to it quite without reference to its capacity."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_bert/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_a3t/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_clip/1.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt_voc/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_bert/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_a3t/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_clip/1.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<p></p>
+<li style="text-align: left;font-size: 20px; font-style: italic">"No steps taken to reduce the number of committals, and the governor was obliged to utilize the chapel as a day and night room."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_bert/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_a3t/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_clip/2.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt_voc/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_bert/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_a3t/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_clip/2.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<p></p>
+<li style="text-align: left;font-size: 20px; font-style: italic">"And debtors might practically have as much as they liked, if they could only pay for it."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_bert/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_a3t/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_clip/3.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt_voc/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_bert/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_a3t/3.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_clip/3.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<p></p>
+<li style="text-align: left;font-size: 20px; font-style: italic">"For this and other acts of misconduct there was the discipline of the refractory ward, or "strong room" on the debtors' side."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_bert/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_a3t/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/fs2_clip/4.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/gt_voc/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_bert/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_a3t/4.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/lj/ps_clip/4.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<p></p>
+</ol>
+
+
+<h2 id="LibriTTS-English-multi-speaker"><a href="#LibriTTS-English-multi-speaker" class="headerlink" title="LibriTTS (English, multi-speaker)"></a>LibriTTS (English, multi-speaker)</h2><ol>
+<li style="text-align: left;font-size: 20px; font-style: italic">"If at first you don't succeed, try try again."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/gt/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_bert/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_a3t/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_clip/0.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/gt_voc/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_bert/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_a3t/0.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_clip/0.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<li style="text-align: left;font-size: 20px; font-style: italic">"He was, however, driven to resolve that he must go direct to Sophie, as otherwise, he could find no means of doing as he had promised."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/gt/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_bert/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_a3t/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_clip/1.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/gt_voc/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_bert/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_a3t/1.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_clip/1.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+<li style="text-align: left;font-size: 20px; font-style: italic">"The stove had a lot of little openings. In one he would put an egg, in another some coffee, and another a piece of meat, and in the fourth some water."</li> 
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT</th>
+        <th align="center">PB baseline</th>
+        <th align="center">PB + BERT</th>
+          <th align="center">PB + A3T</th>
+        <th align="center">PB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/gt/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_bert/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_a3t/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/fs2_clip/2.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">GT (voc.)</th>
+        <th align="center">VB baseline</th>
+        <th align="center">VB + BERT</th>
+          <th align="center">VB + A3T</th>
+        <th align="center">VB + CLAPSpeech</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/gt_voc/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_bert/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_a3t/2.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 140px;" controls><source src="clapspeech/audio/libritts/ps_clip/2.wav" type="audio/wav"></audio></td>
+    </tr>
+</tbody>
+</table>
+</ol>
+
+
+<h1 id="Prosody-Transfer"><a href="#Prosody-Transfer" class="headerlink" title="Prosody Transfer"></a>Prosody Transfer</h1><p>We use the text encoder of CLAPSpeech to extract the text prosody encoding of s7 and s8, then replace the text token encoding of <em>“higher”</em> in s8 with that in s7. The text of s7&#x2F;s8 are shown in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>sentence</th>
+<th>text</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>s7 (reference)</td>
+<td><strong>Higher</strong> up could be seen some chinamen.</td>
+</tr>
+<tr>
+<td>s8 (source&#x2F;transfered)</td>
+<td>And create <strong>higher</strong> bodies for themselves!</td>
+</tr>
+</tbody></table>
+<p>We provide the audio and mel-spectrogram of the reference, source, and transferred sample in the following table. We can hear that by editing the text encoding of “higher” in the source sample, the prosody pattern of <em>“higher”</em> in the reference (the pitch contours in reference remain flat in the early stage and then rise in the late stage) has been successfully transfered into the transfered sample.</p>
+<ol>
+<table style="width: 100%;">
+    <thead>
+    <tr>
+        <th></th>
+        <th align="center">Reference</th>
+        <th align="center">Source</th>
+        <th align="center">Transfered</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">wav</th>
+        <td><audio style="width: 300px;" controls><source src="clapspeech/audio/transfer/ref.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 300px;" controls><source src="clapspeech/audio/transfer/before.wav" type="audio/wav"></audio></td>
+        <td><audio style="width: 300px;" controls><source src="clapspeech/audio/transfer/after.wav" type="audio/wav"></audio></td>
+    </tr>
+        <tr>
+        <th scope="row">mel</th>
+        <!-- <img style='width: 300px;' ><source src="clapspeech/prosody_ref.png"></img> -->
+        <td><img decoding="async" src="/clapspeech/prosody_ref.png" alt="Smiley face" height="300"></td>
+        <td><img decoding="async" src="/clapspeech/prosody_before.png" alt="Smiley face" height="300"></td>
+        <td><img decoding="async" src="/clapspeech/prosody_after.png" alt="Smiley face" height="300"></td>
+    </tr>
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/04/clapspeech/" data-id="clch6k3uc0000aejkgveg1qhl" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+</tbody>
+</table>
+</ol>
+        </div></article>
+      <nav class="pagination"></nav></section></div>
+</div>
+      </main>
 
+      <footer id="footer" class="footer"></footer>
 
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/01/04/clapspeech/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
 </body>
 </html>
